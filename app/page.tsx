@@ -2,6 +2,7 @@ import { Sprout, Users, Target, ShieldCheck, Globe2 } from "lucide-react";
 import Image from "next/image";
 import Navbar from "../components/layout/Navbar";
 import ServiceRibbon from "../components/section/ServiceRibbon";
+import Stack from "../components/ui/Stack";
 
 export default function Home() {
   return (
@@ -54,18 +55,33 @@ export default function Home() {
         <ServiceRibbon />
       </section>
 
+      {/* About section */}
+      <section className="pt-48 md:pt-32 pb-20 bg-gray-50">
+        <div className="container mx-auto px-6 flex flex-col items-center text-center">
+          <h2 className="text-3xl font-bold mb-4 text-emerald-600 uppercase text-center">
+            Tentang Kami
+          </h2>
+          <div className="flex items-center justify-center mb-8" style={{ width: 208, height: 208 }}>
+            <Stack
+              randomRotation
+            />
+          </div>
+          <p className="text-gray-600 leading-relaxed text-center">
+            CV. Alpan Agro Jaya adalah perusahaan yang bergerak di bidang agribisnis, dengan fokus pada pengadaan, pengolahan, dan pemasaran hasil pertanian kepada konsumen akhir. Kami berkomitmen untuk meningkatkan efisiensi produk pertanian lokal dengan sistem terintegrasi, serta memberikan layanan terbaik bagi industri hilir.
+          </p>
+        </div>
+      </section>
+
       {/* VISI & MISI SECTION */}
-      {/* pt-48 di mobile karena ServiceRibbon memakan ruang lebih banyak saat menumpuk */}
       <section className="pt-48 md:pt-32 pb-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          {/* gap-8 di mobile, gap-16 di desktop */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
             
             {/* Visi */}
             <div className="bg-white p-6 md:p-10 rounded-2xl shadow-sm border-t-4 border-emerald-500">
               <div className="flex items-center gap-4 mb-6">
                 <Target className="text-emerald-500" size={32} />
-                <h2 className="text-xl md:text-2xl font-bold">Visi Kami</h2>
+                <h2 className="text-xl md:text-2xl font-bold text-emerald-600 uppercase">Visi Kami</h2>
               </div>
               <p className="text-lg md:text-xl italic font-medium leading-relaxed">
                 Meningkatkan Efisiensi Produk Industri Hulu (Petani) dan Service yang memuaskan Industri Hilir (Client)
@@ -76,7 +92,7 @@ export default function Home() {
             <div className="px-2 md:px-0">
               <div className="flex items-center gap-4 mb-6">
                 <ShieldCheck className="text-emerald-500" size={32} />
-                <h2 className="text-xl md:text-2xl font-bold">Misi Kami</h2>
+                <h2 className="text-xl md:text-2xl font-bold text-emerald-600 uppercase">Misi Kami</h2>
               </div>
               <ul className="space-y-4 text-sm md:text-base">
                 {[
