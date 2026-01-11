@@ -35,20 +35,16 @@ export default function ServiceRibbon() {
                     : "bg-white text-[#064e3b] hover:bg-gray-50"
                   }`}
               >
-                {/* Ukuran Icon diperkecil signifikan di mobile */}
                 <item.icon 
                   size={16} 
                   className={`md:size-7 mb-1 md:mb-2 transition-transform duration-300 group-hover:-translate-y-0.5 
                     ${isActive ? "text-[#10b981]" : "text-[#10b981]"}`} 
                 />
                 
-                {/* Font menggunakan ukuran mikro (7px-8px) agar tidak wrapping/turun baris */}
-                <h3 className="font-extrabold uppercase text-[7px] md:text-[11px] tracking-tighter md:tracking-wider leading-none mb-0.5">
+                <h3 className="font-extrabold uppercase text-[10px] md:text-[14px] tracking-tighter md:tracking-wider leading-none mb-0.5">
                   {item.title}
-                </h3>
-                
-                {/* Deskripsi disederhanakan kata-katanya agar muat */}
-                <p className={`hidden sm:block md:text-[9px] uppercase font-semibold leading-tight
+                </h3> 
+                <p className={`hidden sm:block md:text-[10px] uppercase font-semibold leading-tight
                   ${isActive ? "text-gray-300" : "text-gray-500"}`}
                 >
                   {item.desc}
