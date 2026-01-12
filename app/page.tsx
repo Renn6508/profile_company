@@ -4,6 +4,7 @@ import Navbar from "../components/layout/Navbar";
 import ServiceRibbon from "../components/section/ServiceRibbon";
 import Stack from "../components/ui/Stack";
 import ServicesGallery from "../components/ui/Servicesgallery";
+import ScrollToTop from "../components/ui/ScrollToTop";
 
 export default function Home() {
   return (
@@ -54,7 +55,7 @@ export default function Home() {
       </section>
 
       {/* About section */}
-      <section className="pt-48 md:pt-32 pb-20 bg-gray-50">
+      <section id="tentang-kami" className="pt-48 md:pt-32 pb-20 bg-gray-50">
         <div className="container mx-auto px-6 flex flex-col items-center text-center">
           <h2 className="text-3xl font-bold mb-8 text-emerald-600 uppercase text-center">
             ─── Tentang Kami ───
@@ -85,7 +86,7 @@ export default function Home() {
       </section>
 
       {/* VISI & MISI SECTION */}
-      <section className="pt-48 md:pt-32 pb-20 bg-gray-100">
+      <section id="visi-misi" className="pt-48 md:pt-32 pb-20 bg-gray-100">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-16 text-emerald-600 uppercase text-center">
             ─── Visi & Misi ───
@@ -127,7 +128,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pt-48 md:pt-32 pb-20 bg-gray-50"> 
+      <section id="layanan" className="pt-48 md:pt-32 pb-20 bg-gray-50"> 
        <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold mb-10 text-emerald-600 uppercase text-center">
             ─── Layanan Kami ───
@@ -149,6 +150,7 @@ export default function Home() {
             © 2026 CV. Alpan Agro Jaya. Developed by {`Leoren`}.
           </div>
         </div>
+        <ScrollToTop />
       </footer>
     </main>
   );
