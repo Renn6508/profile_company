@@ -3,14 +3,12 @@ import Image from "next/image";
 import Navbar from "../components/layout/Navbar";
 import ServiceRibbon from "../components/section/ServiceRibbon";
 import Stack from "../components/ui/Stack";
+import ServicesGallery from "../components/ui/Servicesgallery";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden"> {/* Mencegah kebocoran layout ke samping */}
+    <main className="overflow-x-hidden">
       <Navbar />
-
-      {/* HERO SECTION */}
-      {/* Gunakan min-h-screen agar fleksibel jika konten memanjang di mobile */}
       <section className="relative min-h-screen md:h-screen flex items-center text-white z-20 overflow-visible py-20 md:py-0">
 
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -127,6 +125,15 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="pt-48 md:pt-32 pb-20 bg-gray-50"> 
+       <div className="container mx-auto px-6">
+        <h2 className="text-3xl font-bold mb-8 text-emerald-600 uppercase text-center">
+            Layanan Kami
+          </h2>
+          <ServicesGallery />
+       </div>
       </section>
 
       {/* FOOTER */}
