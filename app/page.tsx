@@ -8,11 +8,11 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden"> {/* Mencegah kebocoran layout ke samping */}
       <Navbar />
-      
+
       {/* HERO SECTION */}
       {/* Gunakan min-h-screen agar fleksibel jika konten memanjang di mobile */}
       <section className="relative min-h-screen md:h-screen flex items-center text-white z-20 overflow-visible py-20 md:py-0">
-        
+
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/images/background.jpg"
@@ -32,14 +32,14 @@ export default function Home() {
               CV. ALPAN AGRO JAYA
             </h2>
             <h1 className="text-3xl sm:text-4xl md:text-6xl text-white mb-6 leading-tight font-bold uppercase">
-              Solusi Agribisnis <br className="hidden md:block" /> 
+              Solusi Agribisnis <br className="hidden md:block" />
               <span className="text-emerald-400">Hulu ke Hilir</span>
             </h1>
             <p className="text-gray-200 text-sm md:text-lg mb-8 max-w-2xl leading-relaxed">
               Meningkatkan efisiensi produk pertanian lokal dengan sistem terintegrasi,
               melayani kebutuhan dari penyediaan sarana hingga pemasaran produk.
             </p>
-            
+
             {/* Tombol: Full width di HP, Auto di Desktop */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded font-bold uppercase tracking-wider transition-all text-sm">
@@ -61,24 +61,39 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-8 text-emerald-600 uppercase text-center">
             Tentang Kami
           </h2>
-          <div className="flex items-center justify-center mb-8" style={{ width: 480, height: 270 }}>
-            <Stack
-              autoplay
-              autoplayDelay={3500}
-              pauseOnHover
-            />
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 mb-8">
+            <div className="w-full lg:w-1/2 flex items-center justify-center">
+              <div className="w-full max-w-[480px] aspect-video">
+                <Stack
+                  autoplay
+                  autoplayDelay={3500}
+                  pauseOnHover
+                />
+              </div>
+            </div>
+
+            <div className="w-full lg:w-1/2">
+              <p className="text-gray-600 leading-relaxed text-center lg:text-left">
+                CV. Alpan Agro Jaya adalah perusahaan yang bergerak di bidang agribisnis,
+                dengan fokus pada pengadaan, pengolahan, dan pemasaran hasil pertanian
+                kepada konsumen akhir. Kami berkomitmen untuk meningkatkan efisiensi
+                produk pertanian lokal dengan sistem terintegrasi, serta memberikan
+                layanan terbaik bagi industri hilir.
+              </p>
+            </div>
           </div>
-          <p className="text-gray-600 leading-relaxed text-center">
-            CV. Alpan Agro Jaya adalah perusahaan yang bergerak di bidang agribisnis, dengan fokus pada pengadaan, pengolahan, dan pemasaran hasil pertanian kepada konsumen akhir. Kami berkomitmen untuk meningkatkan efisiensi produk pertanian lokal dengan sistem terintegrasi, serta memberikan layanan terbaik bagi industri hilir.
-          </p>
+
         </div>
       </section>
 
       {/* VISI & MISI SECTION */}
       <section className="pt-48 md:pt-32 pb-20 bg-gray-50">
         <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-16 text-emerald-600 uppercase text-center">
+            Visi & Misi
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
-            
+
             {/* Visi */}
             <div className="bg-white p-6 md:p-10 rounded-2xl shadow-sm border-t-4 border-emerald-500">
               <div className="flex items-center gap-4 mb-6">
@@ -86,7 +101,7 @@ export default function Home() {
                 <h2 className="text-xl md:text-2xl font-bold text-emerald-600 uppercase">Visi Kami</h2>
               </div>
               <p className="text-lg md:text-xl italic font-medium leading-relaxed">
-                Meningkatkan Efisiensi Produk Industri Hulu (Petani) dan Service yang memuaskan Industri Hilir (Client)
+                "Meningkatkan Efisiensi Produk Industri Hulu (Petani) dan Service yang memuaskan Industri Hilir (Client)"
               </p>
             </div>
 
