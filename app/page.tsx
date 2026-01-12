@@ -57,7 +57,7 @@ export default function Home() {
       {/* About section */}
       <section id="tentang-kami" className="pt-48 md:pt-32 pb-20 bg-gray-50">
         <div className="container mx-auto px-6 flex flex-col items-center text-center">
-          <h2 className="text-3xl font-bold mb-8 text-emerald-600 uppercase text-center">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-8 text-emerald-600 uppercase text-center">
             ─── Tentang Kami ───
           </h2>
           <div className="flex flex-col lg:flex-row items-center justify-center gap-8 mb-8">
@@ -88,7 +88,7 @@ export default function Home() {
       {/* VISI & MISI SECTION */}
       <section id="visi-misi" className="pt-48 md:pt-32 pb-20 bg-gray-100">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-16 text-emerald-600 uppercase text-center">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-16 text-emerald-600 uppercase text-center">
             ─── Visi & Misi ───
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
@@ -130,10 +130,19 @@ export default function Home() {
 
       <section id="layanan" className="pt-48 md:pt-32 pb-20 bg-gray-50"> 
        <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-10 text-emerald-600 uppercase text-center">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-10 text-emerald-600 uppercase text-center">
             ─── Layanan Kami ───
           </h2>
           <ServicesGallery />
+       </div>
+      </section>
+
+      <section id="partnership" className="pt-48 md:pt-32 pb-20 bg-emerald-700"> 
+       <div className="container mx-auto px-6">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-10 text-white uppercase text-center">
+            ─── Partnership ───
+          </h2>
+          
        </div>
       </section>
 
