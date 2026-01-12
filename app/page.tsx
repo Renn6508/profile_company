@@ -58,12 +58,14 @@ export default function Home() {
       {/* About section */}
       <section className="pt-48 md:pt-32 pb-20 bg-gray-50">
         <div className="container mx-auto px-6 flex flex-col items-center text-center">
-          <h2 className="text-3xl font-bold mb-4 text-emerald-600 uppercase text-center">
+          <h2 className="text-3xl font-bold mb-8 text-emerald-600 uppercase text-center">
             Tentang Kami
           </h2>
-          <div className="flex items-center justify-center mb-8" style={{ width: 208, height: 208 }}>
+          <div className="flex items-center justify-center mb-8" style={{ width: 480, height: 270 }}>
             <Stack
-              randomRotation
+              autoplay
+              autoplayDelay={3500}
+              pauseOnHover
             />
           </div>
           <p className="text-gray-600 leading-relaxed text-center">
