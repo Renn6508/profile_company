@@ -47,19 +47,19 @@ const Navbar = () => {
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 md:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className={`text-sm font-bold uppercase tracking-widest hover:text-[#10b981] transition-colors ${
+              className={`text-xs md:text-sm lg:text-base font-bold uppercase tracking-widest hover:text-[#10b981] transition-colors ${
                 isScrolled ? "text-[#4b5563]" : "text-white/90"
               }`}
             >
               {link.name}
             </Link>
           ))}
-          <button className="bg-[#10b981] hover:bg-[#059669] text-white px-5 py-2 rounded font-bold text-xs uppercase tracking-widest transition-all">
+          <button className="bg-[#10b981] hover:bg-[#059669] text-xs md:text-sm text-white px-4 py-2 rounded font-bold uppercase tracking-widest transition-all">
             Hubungi Kami
           </button>
         </div>
