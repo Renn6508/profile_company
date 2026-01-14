@@ -21,15 +21,19 @@ export default function AboutContent() {
 
             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 max-w-6xl mx-auto">
                 {/* Sisi Kiri: Stack Component */}
-                <div className="w-full lg:w-1/2 flex items-center justify-center">
-                    <div className="w-full max-w-[380px] aspect-square relative">
-                        {/* Frame tipis dekoratif agar Stack tidak terlalu polos */}
-                        <div className="absolute inset-0 border-2 border-emerald-100 rounded-3xl translate-x-4 translate-y-4 -z-10"></div>
-                        <Stack
-                            autoplay={true}
-                            autoplayDelay={4000}
-                            randomRotation={true}
-                        />
+                <div className="w-full lg:w-1/2 flex items-center justify-center px-4 md:px-0">
+                    <div className="w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[420px] aspect-square relative group">
+                        <div className="absolute inset-0 border-2 border-emerald-100 rounded-[2rem] translate-x-3 translate-y-3 sm:translate-x-5 sm:translate-y-5 -z-10 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
+                        <div className="absolute -bottom-6 -left-6 w-20 h-20 opacity-20 -z-10 hidden sm:block"
+                            style={{ backgroundImage: 'radial-gradient(#10b981 1.5px, transparent 1.5px)', backgroundSize: '10px 10px' }}>
+                        </div>
+                        <div className="w-full h-full relative z-10">
+                            <Stack
+                                autoplay={true}
+                                autoplayDelay={4000}
+                                randomRotation={true}
+                            />
+                        </div>
                     </div>
                 </div>
 
