@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X, Leaf, Globe2 } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +35,7 @@ const Navbar = () => {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2 group">
           <div className="bg-[#10b981] p-1.5 rounded-lg group-hover:rotate-12 transition-transform">
             <Leaf size={20} className="text-white" />
@@ -47,7 +47,7 @@ const Navbar = () => {
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-6 md:gap-8">
+        <div className="hidden md:flex items-center gap-3 md:gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -61,6 +61,11 @@ const Navbar = () => {
           ))}
           <button className="bg-[#10b981] hover:bg-[#059669] text-xs md:text-sm text-white px-4 py-2 rounded font-bold uppercase tracking-widest transition-all">
             Hubungi Kami
+          </button>
+
+          {/* language */}
+          <button className="bg-[#10b981] hover:bg-[#059669] text-xs md:text-sm text-white px-4 py-2 rounded font-bold uppercase tracking-widest transition-all">
+            <Globe2 size={20} className="text-white" />
           </button>
         </div>
 

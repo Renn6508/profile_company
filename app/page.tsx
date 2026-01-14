@@ -1,10 +1,11 @@
-import { Sprout, Users, Target, ShieldCheck, Globe2 } from "lucide-react";
+import { Sprout, Users, Target, ShieldCheck, Globe2, Phone } from "lucide-react";
 import Image from "next/image";
 import Navbar from "../components/layout/Navbar";
 import ServiceRibbon from "../components/section/ServiceRibbon";
 import Stack from "../components/ui/Stack";
 import ServicesGallery from "../components/ui/Servicesgallery";
 import ScrollToTop from "../components/ui/ScrollToTop";
+import CardContact from "../components/ui/ContactData";
 
 export default function Home() {
   return (
@@ -128,22 +129,60 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="layanan" className="pt-48 md:pt-32 pb-20 bg-gray-50"> 
-       <div className="container mx-auto px-6">
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-10 text-emerald-600 uppercase text-center">
+      <section id="layanan" className="pt-48 md:pt-32 pb-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-10 text-emerald-600 uppercase text-center">
             ─── Layanan Kami ───
           </h2>
           <ServicesGallery />
-       </div>
+        </div>
       </section>
 
-      <section id="partnership" className="pt-48 md:pt-32 pb-20 bg-emerald-700"> 
+      {/* <section id="partnership" className="pt-48 md:pt-32 pb-20 bg-emerald-700"> 
        <div className="container mx-auto px-6">
         <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-10 text-white uppercase text-center">
             ─── Partnership ───
           </h2>
           
        </div>
+      </section> */}
+
+      <section id="kontak" className="pt-48 md:pt-32 pb-20 bg-gray-100">
+        <div className="container mx-auto px-6">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-10 text-emerald-600 uppercase text-center">
+            ─── Kontak Kami ───
+          </h2>
+          <div className="flex flex-col md:flex-row max-w-6xl mx-auto">
+            <div className="flex flex-col gap-4 md:w-1/2 p-8">
+              <div className="flex flex-col gap-2">
+                <h2>Your Name</h2>
+                <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-emerald-500" placeholder="Your Name" />
+              </div>
+              <div className="flex flex-col gap-2">
+                <h2>Your Email</h2>
+                <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-emerald-500" placeholder="Your Email" />
+              </div>
+              <div className="flex flex-col gap-2">
+                <h2>Subject</h2>
+                <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-emerald-500" placeholder="Subject" />
+              </div>
+              <div className="flex flex-col gap-2">
+                <h2>Message</h2>
+                <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-emerald-500 h-40" placeholder="Message" />
+              </div>
+              <button className="bg-emerald-600 text-white px-4 py-2 rounded">Submit</button>
+            </div>
+            <div className="flex flex-col md:w-1/2 p-8">
+              <h2 className="text-xs md:text-sm lg:text-base font-bold mb-2 text-emerald-600 uppercase tracking-wider items-end mt-5">Contact</h2>
+              <div className="flex flex-col gap-2 items-start">
+                <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-5 text-emerald-600 uppercase ">Get in Touch</h1>
+                <p className="text-sm md:text-base text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nemo, quo aliquam nesciunt, cumque cum quasi in sed unde nostrum odio sint pariatur voluptates culpa officiis porro, necessitatibus expedita animi vel placeat repudiandae commodi! Dolores neque repudiandae architecto cumque amet assumenda odio eligendi quos mollitia excepturi, nobis optio, vitae voluptas ex. Dolore minus omnis suscipit modi excepturi at autem error nulla ad earum nam aliquam impedit ratione ipsam explicabo, iusto rerum assumenda animi rem vero enim inventore unde! Ut, animi nesciunt harum labore eveniet nostrum blanditiis aliquam?</p>
+              </div>
+
+              <CardContact />
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* FOOTER */}
