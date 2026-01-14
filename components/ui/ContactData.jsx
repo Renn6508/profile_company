@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, Send } from 'lucide-react';
 
 
 const CardContact = ({ icon: Icon, label, value }) => (
-    <div className="flex gap-4 items-center group p-2"> 
+    <div className="flex gap-4 items-start group p-2"> 
     <div className="bg-emerald-600 w-12 h-12 flex items-center justify-center rounded-xl shadow-sm group-hover:scale-110 transition-transform duration-200 shrink-0">
       <Icon className="text-white w-6 h-6" />
     </div>
