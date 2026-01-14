@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, Send } from 'lucide-react';
 
 
 const CardContact = ({ icon: Icon, label, value }) => (
-    <div className="flex gap-4 items-start group p-2"> 
+  <div className="flex gap-4 items-start group p-2">
     <div className="bg-emerald-600 w-12 h-12 flex items-center justify-center rounded-xl shadow-sm group-hover:scale-110 transition-transform duration-200 shrink-0">
       <Icon className="text-white w-6 h-6" />
     </div>
@@ -19,38 +19,38 @@ const CardContact = ({ icon: Icon, label, value }) => (
     </div>
   </div>
 );
-export default function ContactList () {
-    const contactList = [
-        {
-            icon: Phone,
-            label: "Phone",
-            value: "+62 812-3456-7890"
-        },
-        {
-            icon: Mail,
-            label: "Email",
-            value: "contact@alpanagrojaya.com"
-        },
-        {
-            icon: MapPin,
-            label: "Address",
-            value: "Jl. Alpan Agro Jaya No. 1, Jakarta, Indonesia"
-        },
-        {
-            icon: Send,
-            label: "Website",
-            value: "https://alpanagrojaya.com"
-        }
-    ]
-    return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mt-8">
-            {contactList.map((contact, index) => (
-                <CardContact
-                key={index}
-                icon={contact.icon}
-                label={contact.label}
-                value={contact.value}/>
-            ))}
-        </div>
-    )
+export default function ContactList() {
+  const contactList = [
+    {
+      icon: Phone,
+      label: "Phone",
+      value: "+62 812-3456-7890"
+    },
+    {
+      icon: Mail,
+      label: "Email",
+      value: "contact@alpanagrojaya.com"
+    },
+    {
+      icon: MapPin,
+      label: "Address",
+      value: "Jl. Alpan Agro Jaya No. 1, Jakarta, Indonesia"
+    },
+    {
+      icon: Send,
+      label: "Website",
+      value: "https://alpanagrojaya.com"
+    }
+  ]
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mt-8">
+      {contactList.map((contact, index) => (
+        <CardContact
+          key={index}
+          icon={contact.icon}
+          label={contact.label}
+          value={contact.value} />
+      ))}
+    </div>
+  )
 }

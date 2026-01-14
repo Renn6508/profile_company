@@ -86,76 +86,76 @@ const ServicesGallery = () => {
 
       {/* MODAL */}
       <AnimatePresence>
-  {selectedId && selectedItem && (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6">
-      {/* Backdrop */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        onClick={() => setSelectedId(null)}
-        className="absolute inset-0 bg-black/80 backdrop-blur-sm"
-      />
+        {selectedId && selectedItem && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6">
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedId(null)}
+              className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+            />
 
-      {/* Modal Card */}
-      <motion.div
-        layoutId={`card-${selectedItem.id}`}
-        className="relative bg-white rounded-3xl overflow-hidden max-w-4xl w-full max-h-[90vh] flex flex-col md:flex-row shadow-2xl z-10"
-      >
-        {/* 1. Tombol Close (Sticky/Absolute agar tidak hilang saat scroll) */}
-        <button 
-          onClick={() => setSelectedId(null)}
-          className="absolute top-4 right-4 z-20 bg-white/80 backdrop-blur-md text-gray-900 w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors"
-        >
-          &times;
-        </button>
-
-        {/* 2. Area Gambar: shrink-0 penting agar gambar tidak tertekan teks */}
-        <div className="w-full md:w-1/2 h-64 md:h-auto shrink-0 border-b md:border-b-0 md:border-r border-gray-100">
-          <img 
-            src={selectedItem.image} 
-            alt={selectedItem.title} 
-            className="w-full h-full object-cover" 
-          />
-        </div>
-
-        {/* 3. Area Konten: overflow-y-auto untuk teks yang panjang */}
-        <div className="w-full md:w-1/2 flex flex-col overflow-y-auto custom-scrollbar">
-          <div className="p-6 md:p-10">
-            <h3 className="text-2xl md:text-3xl font-bold text-emerald-700 mb-4 leading-tight">
-              {selectedItem.title}
-            </h3>
-            
-            {/* Wrapper teks agar jarak antar paragraf rapi */}
-            <div className="space-y-4 text-gray-600 leading-relaxed text-sm md:text-base">
-              <p className="font-semibold text-emerald-600/80">{selectedItem.desc}</p>
-              
-              {/* Simulasi deskripsi panjang */}
-              <p>{selectedItem.longDesc}</p>
-              
-              {/* Tambahan informasi agar terlihat lebih detail */}
-              <div className="pt-4 border-t border-gray-100">
-                <h4 className="font-bold text-gray-900 mb-2">Mengapa Memilih Layanan Ini?</h4>
-                <ul className="list-disc pl-5 space-y-2">
-                  <li>Standar operasional bersertifikat.</li>
-                  <li>Monitoring real-time untuk setiap proses.</li>
-                  <li>Dukungan tim ahli agribisnis berpengalaman.</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Footer Modal (Tetap di dalam scroll area agar tidak menutupi teks) */}
-            <div className="mt-10 pt-6 border-t border-gray-100">
-              <button className="w-full bg-emerald-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-emerald-700 transition-all hover:shadow-lg active:scale-95">
-                Hubungi Kami
+            {/* Modal Card */}
+            <motion.div
+              layoutId={`card-${selectedItem.id}`}
+              className="relative bg-white rounded-3xl overflow-hidden max-w-4xl w-full max-h-[90vh] flex flex-col md:flex-row shadow-2xl z-10"
+            >
+              {/* 1. Tombol Close (Sticky/Absolute agar tidak hilang saat scroll) */}
+              <button
+                onClick={() => setSelectedId(null)}
+                className="absolute top-4 right-4 z-20 bg-white/80 backdrop-blur-md text-gray-900 w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors"
+              >
+                &times;
               </button>
-            </div>
+
+              {/* 2. Area Gambar: shrink-0 penting agar gambar tidak tertekan teks */}
+              <div className="w-full md:w-1/2 h-64 md:h-auto shrink-0 border-b md:border-b-0 md:border-r border-gray-100">
+                <img
+                  src={selectedItem.image}
+                  alt={selectedItem.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* 3. Area Konten: overflow-y-auto untuk teks yang panjang */}
+              <div className="w-full md:w-1/2 flex flex-col overflow-y-auto custom-scrollbar">
+                <div className="p-6 md:p-10">
+                  <h3 className="text-2xl md:text-3xl font-bold text-emerald-700 mb-4 leading-tight">
+                    {selectedItem.title}
+                  </h3>
+
+                  {/* Wrapper teks agar jarak antar paragraf rapi */}
+                  <div className="space-y-4 text-gray-600 leading-relaxed text-sm md:text-base">
+                    <p className="font-semibold text-emerald-600/80">{selectedItem.desc}</p>
+
+                    {/* Simulasi deskripsi panjang */}
+                    <p>{selectedItem.longDesc}</p>
+
+                    {/* Tambahan informasi agar terlihat lebih detail */}
+                    <div className="pt-4 border-t border-gray-100">
+                      <h4 className="font-bold text-gray-900 mb-2">Mengapa Memilih Layanan Ini?</h4>
+                      <ul className="list-disc pl-5 space-y-2">
+                        <li>Standar operasional bersertifikat.</li>
+                        <li>Monitoring real-time untuk setiap proses.</li>
+                        <li>Dukungan tim ahli agribisnis berpengalaman.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* Footer Modal (Tetap di dalam scroll area agar tidak menutupi teks) */}
+                  <div className="mt-10 pt-6 border-t border-gray-100">
+                    <button className="w-full bg-emerald-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-emerald-700 transition-all hover:shadow-lg active:scale-95">
+                      Hubungi Kami
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
-        </div>
-      </motion.div>
-    </div>
-  )}
-</AnimatePresence>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
