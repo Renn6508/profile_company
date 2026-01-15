@@ -2,6 +2,9 @@
 module.exports = {
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-montserrat)", "sans-serif"],
+      },
       colors: {
         primary: {
           DEFAULT: '#064e3b', // Hijau Hutan (Forest Green) sesuai logo
