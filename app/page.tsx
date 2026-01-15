@@ -2,11 +2,11 @@ import { Sprout, Users, Target, ShieldCheck, Globe2, Phone } from "lucide-react"
 import Image from "next/image";
 import Navbar from "../components/layout/Navbar";
 import ServiceRibbon from "../components/section/ServiceRibbon";
-import Stack from "../components/ui/Stack";
 import ServicesGallery from "../components/ui/Servicesgallery";
-import ScrollToTop from "../components/ui/ScrollToTop";
 import CardContact from "../components/ui/ContactData";
 import AboutContent from "../components/ui/AboutContent";
+import Footer from "../components/layout/Footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
