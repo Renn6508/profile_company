@@ -58,6 +58,7 @@ const ServicesGallery = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 h-auto md:h-[600px]">
         {services.map((item) => (
           <motion.div
+            data-aos="fade-up"
             layoutId={`card-${item.id}`} // Animasi transisi smooth
             key={item.id}
             onClick={() => setSelectedId(item.id)}

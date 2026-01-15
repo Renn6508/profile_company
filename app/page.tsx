@@ -1,4 +1,8 @@
+"use client";
 import { Sprout, Users, Target, ShieldCheck, Globe2, Phone } from "lucide-react";
+import { useState, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // <-- CSS untuk animasi
 import Image from "next/image";
 import Navbar from "../components/layout/Navbar";
 import ServiceRibbon from "../components/section/ServiceRibbon";
@@ -9,6 +13,14 @@ import Footer from "../components/layout/Footer";
 import Link from "next/link";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,        // durasi animasi (ms)
+      easing: 'ease-in-out', // gaya transisi
+      once: true,           // animasi hanya berjalan sekali
+      mirror: false         // jangan animasi ulang saat scroll ke atas
+    });
+  }, []);
   return (
     <main className="overflow-x-hidden">
       <Navbar />
@@ -57,12 +69,27 @@ export default function Home() {
       </section>
 
       {/* About section */}
-      <section id="tentang-kami" className="pt-48 md:pt-32 pb-20 bg-white">
-      <AboutContent />
+      <section id="tentang-kami" className="pt-24 md:pt-24 pb-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col items-center text-center mb-8 md:mb-14">
+            <div className="flex items-center gap-4 mb-3">
+              <div className="w-8 h-[2px] bg-emerald-500/50"></div>
+              <span className="text-emerald-600 font-bold tracking-[0.3em] text-xs uppercase">
+                Who We Are
+              </span>
+              <div className="w-8 h-[2px] bg-emerald-500/50"></div>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 uppercase tracking-tight">
+              Tentang <span className="text-emerald-600">Kami</span>
+            </h2>
+            <div className="mt-6 w-16 h-1 bg-emerald-600 rounded-full"></div>
+          </div>
+          <AboutContent />
+        </div>
       </section>
 
       {/* VISI & MISI SECTION */}
-      <section id="visi-misi" className="relative pt-32 pb-24 bg-white overflow-hidden">
+      <section id="visi-misi" className="relative pt-24 pb-24 bg-white overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-[0.03] pointer-events-none"
           style={{ backgroundImage: 'radial-gradient(#10b981 1.5px, transparent 1.5px)', backgroundSize: '30px 30px' }}>
         </div>
@@ -81,7 +108,7 @@ export default function Home() {
             <div className="mt-6 w-16 h-1 bg-emerald-600 rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-            <div className="lg:col-span-5 bg-emerald-600 rounded-3xl p-8 md:p-12 text-white shadow-xl shadow-emerald-200 relative overflow-hidden group">
+            <div data-aos="fade-up" className="lg:col-span-5 bg-emerald-600 rounded-3xl p-8 md:p-12 text-white shadow-xl shadow-emerald-200 relative overflow-hidden group">
               <Target className="absolute -bottom-6 -right-6 text-white/10 group-hover:scale-110 transition-transform duration-500" size={180} />
 
               <div className="relative z-10">
@@ -96,7 +123,7 @@ export default function Home() {
             </div>
 
             {/* --- KARTU MISI (Dibuat Terang dengan Aksen List Berwarna) --- */}
-            <div className="lg:col-span-7 bg-white border-2 border-emerald-400 rounded-3xl p-8 md:p-12 shadow-sm relative">
+            <div data-aos="fade-up" data-aos-delay="100" className="lg:col-span-7 bg-white border-2 border-emerald-400 rounded-3xl p-8 md:p-12 shadow-sm relative">
               <div className="flex items-center gap-4 mb-10">
                 <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center">
                   <ShieldCheck className="text-emerald-600" size={28} />
@@ -123,7 +150,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="layanan" className="pt-48 md:pt-32 pb-20 bg-gray-50">
+      <section id="layanan" className="pt-24 md:pt-24 pb-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center text-center mb-4 md:mb-8">
             <div className="flex items-center gap-4 mb-3">
@@ -151,7 +178,7 @@ export default function Home() {
        </div>
       </section> */}
 
-      <section id="kontak" className="pt-48 md:pt-32 pb-20 bg-gray-100">
+      <section id="kontak" className="pt-24 md:pt-24 pb-20 bg-gray-100">
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center text-center mb-4 md:mb-8">
             <div className="flex items-center gap-4 mb-3">
@@ -169,7 +196,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row max-w-6xl mx-auto items-center">
 
             {/* SISI KIRI: KARTU WHATSAPP */}
-            <div className="flex flex-col gap-4 md:w-1/2 p-8 w-full">
+            <div data-aos="fade-up" className="flex flex-col gap-4 md:w-1/2 p-8 w-full">
               <a
                 href="https://wa.me/6282277888936?text=Halo%20Admin,%20saya%20ingin%20bertanya%20mengenai%20layanan%20Anda."
                 target="_blank"
@@ -198,10 +225,10 @@ export default function Home() {
               </a>
             </div>
             <div className="flex flex-col md:w-1/2 p-8">
-              <h2 className="text-xs md:text-sm lg:text-base font-bold mb-2 text-emerald-600 uppercase tracking-wider mt-5">Contact</h2>
+              <h2 data-aos="fade-up" data-aos-delay="100" className="text-xs md:text-sm lg:text-base font-bold mb-2 text-emerald-600 uppercase tracking-wider mt-5">Contact</h2>
               <div className="flex flex-col gap-2 items-start">
-                <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-5 text-emerald-600 uppercase">Get in Touch</h1>
-                <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                <h1 data-aos="fade-up" data-aos-delay="200" className="text-xl md:text-2xl lg:text-3xl font-bold mb-5 text-emerald-600 uppercase">Get in Touch</h1>
+                <p data-aos="fade-up" data-aos-delay="300" className="text-sm md:text-base text-gray-600 leading-relaxed">
                   Punya pertanyaan atau butuh bantuan lebih lanjut? Kami siap membantu Anda. Silakan hubungi kami melalui WhatsApp atau isi formulir yang tersedia. Tim kami akan segera merespons pesan Anda.
                 </p>
               </div>

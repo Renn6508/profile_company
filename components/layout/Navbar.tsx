@@ -65,9 +65,9 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-3 border-l border-gray-300/30 pl-8">
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-lg font-bold uppercase text-[10px] lg:text-xs tracking-widest transition-all shadow-md active:scale-95">
+            <Link href="#kontak" className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-lg font-bold uppercase text-[10px] lg:text-xs tracking-widest transition-all shadow-md active:scale-95">
               Hubungi Kami
-            </button>
+            </Link>
             <button 
               className={`p-2.5 rounded-lg border transition-all active:scale-90 ${
                 isScrolled 
@@ -111,9 +111,9 @@ const Navbar = () => {
             </Link>
           ))}
           <div className="flex flex-col gap-3 pt-2">
-            <button className="bg-emerald-600 text-white py-4 rounded-xl font-bold text-xs uppercase tracking-widest shadow-lg">
+            <Link href="#kontak" className="text-center bg-emerald-600 text-white py-4 rounded-xl font-bold text-xs uppercase tracking-widest shadow-lg">
               Hubungi Kami
-            </button>
+            </Link>
             <button className="flex items-center justify-center gap-2 border border-emerald-100 text-emerald-600 py-3 rounded-xl font-bold text-xs uppercase tracking-widest">
               <Globe2 size={18} /> Indonesia
             </button>
