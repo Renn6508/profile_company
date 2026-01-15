@@ -22,6 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className="scroll-smooth">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       <body className={`${montserrat.variable} font-sans antialiased text-secondary bg-white`}>
         {children}
       </body>
