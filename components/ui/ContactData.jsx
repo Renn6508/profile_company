@@ -13,7 +13,7 @@ const CardContact = ({ icon: Icon, label, value }) => (
       <span className="text-[10px] md:text-xs font-bold text-emerald-600 uppercase tracking-[0.15em] leading-none">
         {label}
       </span>
-      <p className="text-sm md:text-base font-semibold text-gray-800 mt-1">
+      <p className="text-sm font-semibold text-gray-800 mt-1">
         {value}
       </p>
     </div>
@@ -24,17 +24,17 @@ export default function ContactList() {
     {
       icon: Phone,
       label: "Phone",
-      value: "+62 812-3456-7890"
+      value: "+62 822-7788-8936"
     },
     {
       icon: Mail,
       label: "Email",
-      value: "contact@alpanagrojaya.com"
+      value: "cvalpanagrojaya@gmail.com"
     },
     {
       icon: MapPin,
       label: "Address",
-      value: "Jl. Alpan Agro Jaya No. 1, Jakarta, Indonesia"
+      value: "GRAND ALEXANDRIA AF 8 NOMOR 10, Desa/Kelurahan Damarsi, Kec.Buduran, Kab. Sidoarjo, Provinsi Jawa Timur"
     },
     {
       icon: Send,

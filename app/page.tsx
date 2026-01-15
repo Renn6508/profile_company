@@ -43,12 +43,12 @@ export default function Home() {
 
             {/* Tombol: Full width di HP, Auto di Desktop */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded font-bold uppercase tracking-wider transition-all text-sm">
+              <Link href="#layanan" className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded font-bold uppercase tracking-wider transition-all text-sm">
                 Layanan Kami
-              </button>
-              <button className="border border-white/30 px-8 py-3 rounded font-bold hover:bg-white/10 uppercase text-sm tracking-wider transition-all">
+              </Link>
+              <Link href="#visi-misi" className="border border-white/30 px-8 py-3 rounded font-bold hover:bg-white/10 uppercase text-sm tracking-wider transition-all">
                 Visi & Misi
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function Home() {
           style={{ backgroundImage: 'radial-gradient(#10b981 1.5px, transparent 1.5px)', backgroundSize: '30px 30px' }}>
         </div>
         <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col items-center text-center mb-8 md:mb-14">
+          <div className="flex flex-col items-center text-center mb-4 md:mb-8">
             <div className="flex items-center gap-4 mb-3">
               <div className="w-8 h-[2px] bg-emerald-500/50"></div>
               <span className="text-emerald-600 font-bold tracking-[0.3em] text-xs uppercase">
@@ -125,7 +125,7 @@ export default function Home() {
 
       <section id="layanan" className="pt-48 md:pt-32 pb-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col items-center text-center mb-8 md:mb-14">
+          <div className="flex flex-col items-center text-center mb-4 md:mb-8">
             <div className="flex items-center gap-4 mb-3">
               <div className="w-8 h-[2px] bg-emerald-500/50"></div>
               <span className="text-emerald-600 font-bold tracking-[0.3em] text-xs uppercase">
@@ -153,7 +153,7 @@ export default function Home() {
 
       <section id="kontak" className="pt-48 md:pt-32 pb-20 bg-gray-100">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col items-center text-center mb-8 md:mb-14">
+          <div className="flex flex-col items-center text-center mb-4 md:mb-8">
             <div className="flex items-center gap-4 mb-3">
               <div className="w-8 h-[2px] bg-emerald-500/50"></div>
               <span className="text-emerald-600 font-bold tracking-[0.3em] text-xs uppercase">
@@ -171,7 +171,7 @@ export default function Home() {
             {/* SISI KIRI: KARTU WHATSAPP */}
             <div className="flex flex-col gap-4 md:w-1/2 p-8 w-full">
               <a
-                href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20bertanya%20mengenai%20layanan%20Anda."
+                href="https://wa.me/6282277888936?text=Halo%20Admin,%20saya%20ingin%20bertanya%20mengenai%20layanan%20Anda."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative overflow-hidden bg-white p-10 rounded-3xl shadow-lg border border-emerald-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center"
@@ -213,20 +213,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#064e3b] py-12 text-center text-white border-t border-emerald-800">
-        <div className="container mx-auto px-6">
-          <h3 className="text-emerald-400 font-bold mb-4 uppercase tracking-widest text-sm">
-            Asosiasi Hasil Alam dan Pangan
-          </h3>
-          <p className="text-xs md:text-sm text-gray-400 max-w-md mx-auto mb-8">
-            Bekerja sama langsung dengan asosiasi petani, nelayan, dan peternak dari Aceh hingga Papua.
-          </p>
-          <div className="pt-8 border-t border-white/10 text-[10px] uppercase tracking-widest opacity-50">
-            © 2026 CV. Alpan Agro Jaya. Developed by {`Leoren`}.
-          </div>
-        </div>
-        <ScrollToTop />
-      </footer>
+      <Footer />
     </main>
   );
 }
