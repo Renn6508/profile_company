@@ -58,11 +58,11 @@ export default function AboutContent() {
 
                 {/* Aksen Statistik Sederhana */}
                 <div className="grid grid-cols-2 gap-6 mt-4 border-t border-gray-100">
-                    <div>
+                    <div className="p-4">
                         <p data-aos="fade-up" data-aos-delay="1000" className="text-3xl font-bold text-emerald-600">100%</p>
                         <p data-aos="fade-up" data-aos-delay="1200" className="text-xs uppercase tracking-widest text-gray-500 font-bold">Produk Lokal</p>
                     </div>
-                    <div>
+                    <div className="p-4">
                         <p data-aos="fade-up" data-aos-delay="1400" className="text-3xl font-bold text-emerald-600">Aceh-Papua</p>
                         <p data-aos="fade-up" data-aos-delay="1600" className="text-xs uppercase tracking-widest text-gray-500 font-bold">Jangkauan Luas</p>
                     </div>
