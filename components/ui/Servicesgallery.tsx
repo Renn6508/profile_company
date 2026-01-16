@@ -101,7 +101,7 @@ const ServicesGallery = () => {
             {/* Modal Card */}
             <motion.div
               layoutId={`card-${selectedItem.id}`}
-              className="relative bg-white rounded-3xl overflow-hidden max-w-4xl w-full max-h-[90vh] flex flex-col md:flex-row shadow-2xl z-10"
+              className="relative bg-white rounded-3xl overflow-hidden max-w-4xl w-full max-h-[70vh] flex flex-col md:flex-row shadow-2xl z-10"
             >
               {/* 1. Tombol Close (Sticky/Absolute agar tidak hilang saat scroll) */}
               <button
