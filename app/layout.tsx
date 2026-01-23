@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 });
 
 // 1. Definisikan URL Production di sini (PENTING untuk OG Image)
-const DOMAIN_URL = "https://cvalpanagrojaya.com"; // Ganti dengan domain aslimu
+const DOMAIN_URL = "https://alpan-agro-jaya.vercel.app"; // Ganti dengan domain aslimu
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -74,6 +74,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className="scroll-smooth">
+      <meta name="google-site-verification" content="6dx9cW0hvoa2say_q2HR9SrRd3ifrQeNW9uNIIRYXFo" />
       {/* Viewport dihapus dari sini karena sudah diexport di atas */}
       
       <body className={`${montserrat.variable} font-sans antialiased text-secondary bg-white`}>
