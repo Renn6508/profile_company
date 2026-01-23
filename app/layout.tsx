@@ -43,6 +43,15 @@ export const metadata: Metadata = {
     "bibit"
     
   ],
+
+  icons: {
+    icon: [
+      { url: '/icon.png', rel: 'icon', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/icon.png' }, // Opsional, untuk iPhone/iPad
+    ],
+  },
   
   authors: [{ name: "Leoren", url: "https://github.com/Renn6508" }],
   
