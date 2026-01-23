@@ -1,56 +1,79 @@
-// src/app/layout.tsx
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 
-const montserrat = Montserrat({ 
+const montserrat = Montserrat({
   subsets: ["latin"],
   variable: '--font-montserrat',
+  display: 'swap',
 });
 
-// 1. Definisikan URL Production di sini (PENTING untuk OG Image)
-const DOMAIN_URL = "https://alpan-agro-jaya.vercel.app"; // Ganti dengan domain aslimu
+const DOMAIN_URL = "https://alpan-agro-jaya.vercel.app";
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  themeColor: "#ffffff", // Bisa sesuaikan warna brand
+  themeColor: "#ffffff",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(DOMAIN_URL), // Wajib ada di Next.js 13+
+  metadataBase: new URL(DOMAIN_URL),
   title: {
     default: "CV. Alpan Agro Jaya | Agripreneur & Agroindustri Terpercaya",
-    template: "%s | CV. Alpan Agro Jaya" // Berguna untuk halaman lain nanti
+    template: "%s | CV. Alpan Agro Jaya"
   },
-  description: "Penyedia sarana produksi pertanian dari hulu hingga hilir. Kami meningkatkan efisiensi produk industri hulu (petani) dan memberikan layanan terbaik bagi industri hilir.",
-  keywords: ["pertanian", "agribisnis", "CV Alpan Agro Jaya", "agroindustri Indonesia", "hasil alam", "pupuk", "bibit"],
+  description: "Penyedia sarana produksi pertanian dari hulu hingga hilir. Supplier pupuk, bibit, dan hasil alam terpercaya di Indonesia.",
+  
+  keywords: [
+    "CV Alpan Agro Jaya", 
+    "Agroindustri Indonesia", 
+    "Supplier Pertanian", 
+    "Jual Pupuk Murah", 
+    "Distributor Bibit Pertanian", 
+    "Agribisnis Jawa Timur", 
+    "Jasa Pertanian Hulu Hilir",
+    "Agripreneur",
+    "pertanian", "agribisnis", 
+    "CV Alpan Agro Jaya", 
+    "agroindustri Indonesia", 
+    "hasil alam", 
+    "pupuk", 
+    "bibit"
+    
+  ],
+  
   authors: [{ name: "Leoren", url: "https://github.com/Renn6508" }],
   
+  alternates: {
+    canonical: './',
+  },
+
   openGraph: {
     title: "CV. Alpan Agro Jaya | Solusi Agribisnis Terpercaya",
-    description: "Mitra terbaik pertanian Indonesia. Dari hulu ke hilir.",
+    description: "Mitra terbaik pertanian Indonesia. Menyediakan pupuk, bibit, dan solusi agroindustri.",
     url: DOMAIN_URL,
     siteName: "CV. Alpan Agro Jaya",
     locale: "id_ID",
     type: "website",
     images: [
       {
-        url: "/og-image.jpg", // Pastikan file ini ada di folder public
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "CV Alpan Agro Jaya Profile",
+        alt: "Profil CV Alpan Agro Jaya",
       },
     ],
   },
+  
   twitter: {
     card: "summary_large_image",
     title: "CV. Alpan Agro Jaya",
     description: "Penyedia sarana produksi pertanian terpercaya.",
-    images: ["/og-image.jpg"], // Menggunakan gambar yang sama
+    images: ["/og-image.jpg"], 
   },
+  
   robots: {
     index: true,
     follow: true,
@@ -62,8 +85,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  
   verification: {
-    google: 'GANTI_KODE_VERIFIKASI_DISINI', 
+    google: '6dx9cW0hvoa2say_q2HR9SrRd3ifrQeNW9uNIIRYXFo', 
   },
 };
 
@@ -72,38 +96,47 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CV. Alpan Agro Jaya",
+    "url": DOMAIN_URL,
+    "logo": `${DOMAIN_URL}/favicon.ico`, 
+    "description": "Penyedia sarana produksi pertanian dari hulu hingga hilir.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "GRAND ALEXANDRIA AF 8 NOMOR 10, Desa/Kelurahan Damarsi, Kec.Buduran, Kab. Sidoarjo, Provinsi Jawa Timur", 
+      "addressLocality": "Lumajang", 
+      "addressRegion": "Jawa Timur",
+      "postalCode": "61252", 
+      "addressCountry": "ID"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",      
+      "telephone": "+62 822-7788-8936", 
+      "contactType": "customer service",
+      "areaServed": "ID",
+      "availableLanguage": "Indonesian"
+    },
+    "sameAs": [
+      "https://instagram.com/alpanagrojaya", 
+      "https://facebook.com/alpanagrojaya"
+    ]
+  };
+
   return (
     <html lang="id" className="scroll-smooth">
-      <meta name="google-site-verification" content="6dx9cW0hvoa2say_q2HR9SrRd3ifrQeNW9uNIIRYXFo" />
-      {/* Viewport dihapus dari sini karena sudah diexport di atas */}
-      
       <body className={`${montserrat.variable} font-sans antialiased text-secondary bg-white`}>
-        {/* Schema Markup untuk Bisnis (LocalBusiness/Organization) */}
-        <Script id="schema-org" strategy="beforeInteractive">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "CV. Alpan Agro Jaya",
-              "url": "${DOMAIN_URL}",
-              "logo": "${DOMAIN_URL}/logo.png",
-              "description": "Penyedia sarana produksi pertanian dari hulu hingga hilir.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Alamat Lengkap Perusahaan",
-                "addressLocality": "Nama Kota",
-                "addressRegion": "Jawa Timur",
-                "postalCode": "KodePos",
-                "addressCountry": "ID"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+62-8xx-xxxx-xxxx",
-                "contactType": "customer service"
-              }
-            }
-          `}
-        </Script>
+        
+        {/* Next.js Script untuk JSON-LD (Cara paling aman) */}
+        <Script
+          id="schema-org"
+          strategy="afterInteractive"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
+        />
         
         {children}
       </body>
