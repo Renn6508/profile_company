@@ -128,7 +128,7 @@ export default function RootLayout({
       "availableLanguage": "Indonesian"
     },
     "sameAs": [
-      "https://instagram.com/alpanagrojaya", 
+      "https://instagram.com/cv_alpanagrojaya", 
       "https://facebook.com/alpanagrojaya"
     ]
   };
