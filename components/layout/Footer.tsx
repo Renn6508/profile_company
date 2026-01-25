@@ -1,4 +1,4 @@
-import { Leaf, Mail, MapPin, Phone, MessageCircle, Facebook, Twitter, Youtube } from "lucide-react";
+import { Leaf, Mail, MapPin, Phone, MessageCircle, Facebook, Twitter, Youtube, Instagram } from "lucide-react";
 import Link from "next/link";
 import ScrollToTop from "../ui/ScrollToTop";
 import Image from "next/image";
@@ -60,6 +60,11 @@ const Footer = () => {
                 <Mail className="text-emerald-400 shrink-0" size={20} />
                 <span>cvalpanagrojaya@gmail.com</span>
               </li>
+              <li className="flex items-center gap-4">
+                <Instagram className="text-emerald-400 shrink-0" size={20} />
+                <span>cv_alpanagrojaya</span>
+              </li>
+      
             </ul>
           </div>
 

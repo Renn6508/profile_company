@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, Instagram } from 'lucide-react';
 
 
 const CardContact = ({ icon: Icon, label, value }) => (
@@ -32,14 +32,19 @@ export default function ContactList() {
       value: "cvalpanagrojaya@gmail.com"
     },
     {
-      icon: MapPin,
-      label: "Address",
-      value: "GRAND ALEXANDRIA AF 8 NOMOR 10, Desa/Kelurahan Damarsi, Kec.Buduran, Kab. Sidoarjo, Provinsi Jawa Timur"
+      icon: Instagram,
+      label: "Instagram",
+      value: "cv_alpanagrojaya",
     },
     {
       icon: Send,
       label: "Website",
-      value: "https://alpanagrojaya.com"
+      value: "https://alpan-agro-jaya.vercel.app"
+    },
+    {
+      icon: MapPin,
+      label: "Address",
+      value: "GRAND ALEXANDRIA AF 8 NOMOR 10, Desa/Kelurahan Damarsi, Kec.Buduran, Kab. Sidoarjo, Provinsi Jawa Timur"
     }
   ]
   return (
