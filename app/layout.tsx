@@ -110,12 +110,12 @@ export default function RootLayout({
     "@type": "Organization",
     "name": "CV. Alpan Agro Jaya",
     "url": DOMAIN_URL,
-    "logo": `${DOMAIN_URL}/favicon.ico`, 
+    "logo": `${DOMAIN_URL}/icon.png`, 
     "description": "Penyedia sarana produksi pertanian dari hulu hingga hilir.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "GRAND ALEXANDRIA AF 8 NOMOR 10, Desa/Kelurahan Damarsi, Kec.Buduran, Kab. Sidoarjo, Provinsi Jawa Timur", 
-      "addressLocality": "Lumajang", 
+      "streetAddress": "GRAND ALEXANDRIA AF 8 NOMOR 10, Desa/Kelurahan Damarsi, Kec.Buduran", 
+      "addressLocality": "Sidoarjo", 
       "addressRegion": "Jawa Timur",
       "postalCode": "61252", 
       "addressCountry": "ID"
