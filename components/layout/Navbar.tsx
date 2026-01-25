@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Leaf, Globe2 } from "lucide-react";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,8 +36,9 @@ const Navbar = () => {
       <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="bg-emerald-500 p-2 rounded-xl group-hover:rotate-12 transition-transform duration-300 shadow-lg shadow-emerald-500/20">
-            <Leaf size={22} className="text-white" />
+          <div className="bg-white p-1 rounded-full group-hover:rotate-12 transition-transform duration-300 shadow-lg shadow-emerald-500/20">
+            {/* <Leaf size={22} className="text-white" /> */}
+            <Image src="/icon.png" alt="Logo" width={25} height={25} className="text-emerald-500" />
           </div>
           <span
             className={`font-black text-xl lg:text-2xl tracking-tighter uppercase transition-colors duration-300 ${

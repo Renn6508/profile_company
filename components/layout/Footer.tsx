@@ -1,6 +1,7 @@
 import { Leaf, Mail, MapPin, Phone, MessageCircle, Facebook, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 import ScrollToTop from "../ui/ScrollToTop";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -11,8 +12,9 @@ const Footer = () => {
           {/* KOLOM 1: BRAND & SOSMED */}
           <div className="flex flex-col gap-6">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="bg-emerald-500 p-1.5 rounded-lg">
-                <Leaf size={20} className="text-white" />
+              <div className="bg-white p-1 rounded-full">
+                {/* <Leaf size={20} className="text-white" /> */}
+                <Image src="/icon.png" alt="Logo" width={25} height={25} className="text-emerald-500" />
               </div>
               <span className="font-black text-xl tracking-tighter uppercase">
                 Alpan <span className="text-emerald-400">Agro</span>
