@@ -196,7 +196,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row max-w-6xl mx-auto items-center">
 
             {/* SISI KIRI: KARTU WHATSAPP */}
-            <div data-aos="fade-up" className="flex flex-col gap-4 md:w-1/2 p-4 w-full">
+            <div data-aos="fade-up" className="flex flex-col gap-4 justify-start -mt-35 md:w-1/2 p-4 w-full">
               <a
                 href="https://wa.me/6282277888936?text=Halo%20Admin,%20saya%20ingin%20bertanya%20mengenai%20layanan%20Anda."
                 target="_blank"
