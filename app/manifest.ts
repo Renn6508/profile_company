@@ -11,9 +11,20 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: '#059669',
     icons: [
       {
-        src: '/favicon.ico', // Pastikan file ini ada di folder public/favicon.ico
+        src: '/favicon.ico',
         sizes: 'any',
         type: 'image/x-icon',
+      },
+      // Tambahkan ini agar HP Android membaca icon PNG yang jernih
+      {
+        src: '/icon.png', // Next.js otomatis generate route ini jika file ada di app/
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
+        src: '/icon.png', 
+        sizes: '512x512',
+        type: 'image/png',
       },
     ],
   }
