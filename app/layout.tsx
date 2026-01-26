@@ -44,11 +44,11 @@ export const metadata: Metadata = {
     
   ],
 
-  icons: {
-    icon: '/favicon.ico', // Next.js akan otomatis mencari ini di folder public
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico', // Atau arahkan ke apple-touch-icon.png jika ada
-  },
+  // icons: {
+  //   icon: '/favicon.ico', // Next.js akan otomatis mencari ini di folder public
+  //   shortcut: '/favicon.ico',
+  //   apple: '/favicon.ico', // Atau arahkan ke apple-touch-icon.png jika ada
+  // },
   
   authors: [{ name: "Leoren", url: "https://github.com/Renn6508" }],
   
