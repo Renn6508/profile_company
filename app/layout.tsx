@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Leoren", url: "https://github.com/Renn6508" }],
   
   alternates: {
-    canonical: './',
+    canonical: DOMAIN_URL,
   },
 
   openGraph: {
