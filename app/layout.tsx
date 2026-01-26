@@ -45,12 +45,9 @@ export const metadata: Metadata = {
   ],
 
   icons: {
-    icon: [
-      { url: '/favicon.ico', rel: 'icon', type: 'image/svg+xml' },
-    ],
-    apple: [
-      { url: '/favicon.ico' }, // Opsional, untuk iPhone/iPad
-    ],
+    icon: '/favicon.ico', // Next.js akan otomatis mencari ini di folder public
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico', // Atau arahkan ke apple-touch-icon.png jika ada
   },
   
   authors: [{ name: "Leoren", url: "https://github.com/Renn6508" }],
