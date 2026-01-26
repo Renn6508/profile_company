@@ -46,10 +46,10 @@ export const metadata: Metadata = {
 
   icons: {
     icon: [
-      { url: '/icon.png', rel: 'icon', type: 'image/png' },
+      { url: '/favicon.ico', rel: 'icon', type: 'image/svg+xml' },
     ],
     apple: [
-      { url: '/icon.png' }, // Opsional, untuk iPhone/iPad
+      { url: '/favicon.ico' }, // Opsional, untuk iPhone/iPad
     ],
   },
   
@@ -110,7 +110,7 @@ export default function RootLayout({
     "@type": "Organization",
     "name": "CV. Alpan Agro Jaya",
     "url": DOMAIN_URL,
-    "logo": `${DOMAIN_URL}/icon.png`, 
+    "logo": `${DOMAIN_URL}/favicon.ico`, 
     "description": "Penyedia sarana produksi pertanian dari hulu hingga hilir.",
     "address": {
       "@type": "PostalAddress",
